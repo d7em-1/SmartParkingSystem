@@ -1,0 +1,30 @@
+﻿@page
+@model SmartParkingWeb.Pages.BookingDetailsModel
+@{
+    ViewData["Title"] = "تفاصيل الحجز";
+}
+
+<div class="container mt-4">
+    <h2 class="text-success mb-3">تفاصيل الحجز</h2>
+    <table class="table table-bordered">
+        <tbody>
+            <tr><th>الاسم الكامل</th><td>@Model.FullName</td></tr>
+            <tr><th>الرقم الجامعي</th><td>@Model.StudentId</td></tr>
+            <tr><th>نوع السيارة</th><td>@Model.CarType</td></tr>
+            <tr><th>الموديل</th><td>@Model.Model</td></tr>
+            <tr><th>اللون</th><td>@Model.Color</td></tr>
+            <tr><th>رقم اللوحة</th><td>@Model.PlateNumber</td></tr>
+            <tr><th>القسم</th><td>@Model.Department</td></tr>
+            <tr><th>صف المواقف</th><td>@Model.SpotRow</td></tr>
+            <tr><th>رقم الموقف</th><td>@Model.SpotNumber</td></tr>
+        </tbody>
+    </table>
+
+    <div class="text-center mt-4">
+        <form method="post">
+            <button type="submit" class="btn btn-success">
+                <i class="fas fa-check-circle"></i> تأكيد الحجز
+            </button>
+        </form>
+    </div>
+</div>
